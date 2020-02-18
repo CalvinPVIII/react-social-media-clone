@@ -12,7 +12,9 @@ class Tweets extends React.Component{
     this.increaseThumbsUp = this.increaseThumbsUp.bind(this);
   }
 increaseThumbsUp(){
-  this.state.totalLikes += 1
+  let newLikesNumber = this.state.totalLikes
+  newLikesNumber += 1
+  this.setState({totalLikes: newLikesNumber})
   console.log(this.state.totalLikes);
 
 }
